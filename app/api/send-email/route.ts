@@ -1,7 +1,7 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend('re_3RWBC6Ag_5LLYFg59gvRjUrg69WBFZpSg');
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   try {
@@ -10,8 +10,8 @@ export async function POST(request: Request) {
 
     // Send email to you (verified email for testing)
     const { data, error } = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>', // Resend's test email
-      to: ['storm.organisers@gmail.com'], // Your verified email for testing
+      from: `Contact Form <${process.env.EMAIL_FROM || 'onboarding@resend.dev'}>`,
+      to: [process.env.EMAIL_TO || 'storm.organisers@gmail.com'],
       replyTo: email, // User's email for easy reply
       subject: `New Contact Form Submission: ${subject}`,
       html: `

@@ -1,17 +1,8 @@
+"use client"
+
 import Header from "@/components/Header"
 import Footer from "@/components/Footer"
 import { MapPin, Phone, Mail, Calendar, Award, Target, Zap, Briefcase, Users, TrendingUp } from "lucide-react"
-import type { Metadata } from "next"
-
-export const metadata: Metadata = {
-  title: "About Shaishav Kayastha - IIM Ahmedabad Alumni | Business Leader",
-  description: "Learn about Shaishav Kayastha's 17+ year journey in EdTech leadership. IIM Ahmedabad alumni with expertise in strategic planning, team building, and revenue generation.",
-  openGraph: {
-    title: "About Shaishav Kayastha - Business Leader & Consultant",
-    description: "17+ years of EdTech leadership experience. Led 120+ teams, generated ₹150+ Cr revenue.",
-    images: ["/about.JPG"],
-  },
-}
 
 export default function About() {
   const highlights = [
