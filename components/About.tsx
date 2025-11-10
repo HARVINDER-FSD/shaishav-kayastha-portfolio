@@ -53,7 +53,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
           {/* Photo section */}
           <div className="lg:col-span-1 flex items-center justify-center">
-            <div className="relative w-full max-w-sm">
+            <div className="relative w-full max-w-lg md:max-w-xl lg:max-w-md">
               <div className="absolute inset-0 bg-primary/15 rounded-2xl blur-2xl"></div>
               <div className="relative w-full aspect-[3/4] rounded-2xl bg-secondary/20 border-2 border-primary flex items-center justify-center overflow-hidden group cursor-pointer">
                 <img

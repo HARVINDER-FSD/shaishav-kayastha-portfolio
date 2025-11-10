@@ -106,7 +106,7 @@ export default function Education() {
 
           {/* Right Column - Profile Image */}
           <div className="flex justify-center order-1 md:order-2">
-            <div className="relative w-64 sm:w-80 md:w-full h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
+            <div className="relative w-[34rem] h-[24rem] rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
               <img
                 src="/education.JPG"
                 alt="Shaishav Kayastha"

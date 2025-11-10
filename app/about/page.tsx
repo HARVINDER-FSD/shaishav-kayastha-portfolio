@@ -59,7 +59,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Image */}
           <div className="flex justify-center order-2 md:order-1">
-            <div className="relative w-64 sm:w-72 md:w-80 aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
+            <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border-4 border-primary/20">
               <img
                 src="/about.JPG"
                 alt="Shaishav Kayastha"
