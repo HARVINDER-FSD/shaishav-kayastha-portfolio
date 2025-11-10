@@ -16,7 +16,7 @@ export default function About() {
   ]
 
   return (
-    <section id="about" className="py-12 sm:py-16 md:py-20 lg:py-28 px-4 sm:px-6 border-t border-border bg-background">
+    <section id="about" className="py-8 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6 border-t border-border bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16">
           <p className="text-xs font-semibold uppercase text-primary tracking-widest mb-2 sm:mb-3 md:mb-4">

@@ -110,19 +110,7 @@ export default function About() {
               </div>
             </div>
 
-            {/* Download CV Button */}
-            <div className="pt-6">
-              <a
-                href="/Shaishav Kayastha CV .docx"
-                download="Shaishav-Kayastha-CV.docx"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:shadow-xl hover:shadow-primary/40 hover:scale-105 transition-all duration-200"
-              >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-                Download Complete CV
-              </a>
-            </div>
+
           </div>
         </div>
       </section>

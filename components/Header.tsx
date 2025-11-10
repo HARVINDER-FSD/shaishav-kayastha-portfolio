@@ -35,8 +35,8 @@ export default function Header() {
             <div className="w-9 sm:w-10 lg:w-12 h-9 sm:h-10 lg:h-12 bg-primary rounded-lg sm:rounded-xl flex items-center justify-center shadow-xl hover:shadow-2xl hover:shadow-primary/40 transition-all duration-300">
               <Briefcase className="text-primary-foreground w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
             </div>
-            <div className="hidden sm:block">
-              <p className="font-bold text-xs sm:text-sm lg:text-base text-primary">Shaishav Kayastha</p>
+            <div>
+              <p className="font-bold text-sm sm:text-sm lg:text-base text-primary">Shaishav Kayastha</p>
               <p className="text-xs text-muted-foreground hidden md:block">Business Leader & Consultant</p>
             </div>
           </Link>
@@ -54,21 +54,12 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-3">
-            <a
-              href="/Shaishav Kayastha CV .docx"
-              download="Shaishav-Kayastha-CV.docx"
-              className="border-2 border-primary text-foreground px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold hover:bg-primary/10 transition-all duration-200 flex-shrink-0"
-            >
-              CV
-            </a>
-            <Link
-              href="/contact"
-              className="bg-primary text-primary-foreground px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold hover:shadow-xl hover:shadow-primary/40 hover:scale-105 transition-all duration-200 flex-shrink-0"
-            >
-              Get In Touch
-            </Link>
-          </div>
+          <Link
+            href="/contact"
+            className="hidden md:block bg-primary text-primary-foreground px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-semibold hover:shadow-xl hover:shadow-primary/40 hover:scale-105 transition-all duration-200 flex-shrink-0"
+          >
+            Get In Touch
+          </Link>
 
           <button
             className="lg:hidden p-1 sm:p-2 text-foreground flex-shrink-0"

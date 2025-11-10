@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, TrendingUp, Users, Building2 } from "lucide-react"
 
 export default function Portfolio() {
   const projects = [
@@ -6,19 +6,25 @@ export default function Portfolio() {
       title: "EdTech Platform Scaling",
       category: "Business Growth",
       description: "Scaled EdTech platform from ₹10Cr to ₹50Cr revenue in 3 years through strategic expansion",
-      image: "/about.JPG",
+      icon: TrendingUp,
+      gradient: "from-blue-500/20 to-purple-500/20",
+      stats: "5x Growth",
     },
     {
       title: "Teacher Network Expansion",
       category: "Community Building",
       description: "Built 700K+ teacher training network across India with innovative content delivery",
-      image: "/teachers-network-education-training-community.jpg",
+      icon: Users,
+      gradient: "from-green-500/20 to-teal-500/20",
+      stats: "700K+ Teachers",
     },
     {
       title: "Organizational Restructuring",
       category: "Operations",
       description: "Led organizational restructuring to improve efficiency and create high-performance culture",
-      image: "/business-organization-team-structure-modern.jpg",
+      icon: Building2,
+      gradient: "from-orange-500/20 to-red-500/20",
+      stats: "120+ Team",
     },
   ]
 
@@ -41,31 +47,35 @@ export default function Portfolio() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          {projects.map((project, idx) => (
-            <div
-              key={idx}
-              className="group cursor-pointer animate-fade-in-up"
-              style={{ animationDelay: `${idx * 100}ms` }}
-            >
-              <div className="relative rounded-2xl overflow-hidden mb-4 sm:mb-6 h-40 sm:h-48 bg-secondary/10 border border-border hover:border-primary transition-all">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4 sm:p-6">
-                  <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+          {projects.map((project, idx) => {
+            const IconComponent = project.icon
+            return (
+              <div
+                key={idx}
+                className="group cursor-pointer animate-fade-in-up"
+                style={{ animationDelay: `${idx * 100}ms` }}
+              >
+                <div className={`relative rounded-2xl overflow-hidden mb-4 sm:mb-6 h-40 sm:h-48 bg-gradient-to-br ${project.gradient} border border-border hover:border-primary transition-all group-hover:shadow-xl group-hover:shadow-primary/20`}>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <IconComponent className="w-16 h-16 sm:w-20 sm:h-20 text-primary opacity-40 group-hover:opacity-60 group-hover:scale-110 transition-all duration-500" />
+                  </div>
+                  <div className="absolute top-4 right-4">
+                    <ArrowUpRight className="w-5 h-5 sm:w-6 sm:h-6 text-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  <div className="absolute bottom-4 left-4">
+                    <span className="text-2xl sm:text-3xl font-bold text-primary">{project.stats}</span>
+                  </div>
+                </div>
+                <div className="space-y-2 sm:space-y-3">
+                  <p className="text-xs font-semibold text-primary uppercase tracking-widest">{project.category}</p>
+                  <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{project.description}</p>
                 </div>
               </div>
-              <div className="space-y-2 sm:space-y-3">
-                <p className="text-xs font-semibold text-primary uppercase tracking-widest">{project.category}</p>
-                <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{project.description}</p>
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
