@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 200 25% 7%;
+  --foreground: 0 0% 100%;
+  --card: 220 30% 14%;
+  --card-foreground: 0 0% 100%;
+  --popover: 220 25% 19%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 35 45% 65%;
+  --primary-foreground: 200 25% 7%;
+  --secondary: 215 30% 40%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 215 16% 47%;
+  --muted-foreground: 214 32% 82%;
+  --accent: 30 25% 45%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 215 25% 27%;
+  --input: 217 33% 17%;
+  --ring: 35 45% 65%;
+  --chart-1: 35 45% 65%;
+  --chart-2: 215 30% 40%;
+  --chart-3: 30 25% 45%;
+  --chart-4: 215 20% 60%;
+  --chart-5: 215 16% 47%;
+  --radius: 0.625rem;
+}
+
+.dark {
+  --background: 200 25% 7%;
+  --foreground: 0 0% 100%;
+  --card: 220 30% 14%;
+  --card-foreground: 0 0% 100%;
+  --popover: 220 25% 19%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 35 45% 65%;
+  --primary-foreground: 200 25% 7%;
+  --secondary: 215 30% 40%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 215 16% 47%;
+  --muted-foreground: 214 32% 82%;
+  --accent: 30 25% 45%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 215 25% 27%;
+  --input: 217 33% 17%;
+  --ring: 35 45% 65%;
+  --chart-1: 35 45% 65%;
+  --chart-2: 215 30% 40%;
+  --chart-3: 30 25% 45%;
+  --chart-4: 215 20% 60%;
+  --chart-5: 215 16% 47%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: #0f1419;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
