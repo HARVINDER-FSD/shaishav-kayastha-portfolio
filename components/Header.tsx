@@ -46,7 +46,11 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-xs lg:text-sm font-semibold text-muted-foreground hover:text-primary transition-all duration-200 uppercase tracking-wider hover:drop-shadow-lg whitespace-nowrap"
+                className={`text-xs lg:text-sm font-semibold transition-all duration-200 uppercase tracking-wider hover:drop-shadow-lg whitespace-nowrap ${
+                  pathname === item.href 
+                    ? "text-primary border-b-2 border-primary" 
+                    : "text-muted-foreground hover:text-primary"
+                }`}
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 {item.label}
@@ -81,7 +85,11 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="block text-sm sm:text-base font-semibold text-muted-foreground hover:text-primary transition-colors py-2 sm:py-3 border-b border-border/50"
+              className={`block text-sm sm:text-base font-semibold transition-colors py-2 sm:py-3 border-b border-border/50 ${
+                pathname === item.href 
+                  ? "text-primary border-l-4 border-l-primary pl-3" 
+                  : "text-muted-foreground hover:text-primary"
+              }`}
               onClick={() => setSidebarOpen(false)}
             >
               {item.label}
