@@ -103,7 +103,20 @@ export default function Footer() {
         <div className="border-t border-[#334155] pt-8 sm:pt-10 md:pt-12">
           {/* Bottom Footer */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-xs sm:text-sm">
-            <p className="text-[#94a3b8] text-center sm:text-left">© 2025 Shaishav Kayastha. All rights reserved.</p>
+            <div className="text-[#94a3b8] text-center sm:text-left">
+              <p>© 2025 Shaishav Kayastha. All rights reserved.</p>
+              <p className="mt-1">
+                Designed & Developed by{" "}
+                <a
+                  href="https://www.instagram.com/ignitegrowthadvertising?igsh=eDAwdmk2NDIzYTRh"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#d4a574] font-semibold hover:text-[#e0b886] transition-colors"
+                >
+                  Ignite Growth Advertising
+                </a>
+              </p>
+            </div>
             <div className="flex items-center gap-6 sm:gap-8">
               <a href="#" className="text-[#94a3b8] hover:text-[#d4a574] transition-colors">
                 Privacy Policy
